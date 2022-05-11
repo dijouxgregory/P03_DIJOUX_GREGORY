@@ -1,0 +1,19 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
+
+// components 
+@import "components/_defaults.scss";
+@import "components/logo-ohmyfood.scss";
+@import "components/_form.scss";
+@import "components/_fonctionnement-liste.scss";
+@import "components/_cards.scss";
+@import "components/_footer.scss";
+@import "components/_button.scss";
+@import "components/_main-pages-menu.scss";
+
+// keyframes
+@import "keyframes/_keyframes-hover-change-content.scss";
+@import "keyframes/_keyframes-apparition-cards.scss";
+@import "keyframes/_keyframes-heart-animation.scss";
+@import "keyframes/_keyframes-loading-spinner.scss";
+@import "keyframes/keyframes-button-shake";

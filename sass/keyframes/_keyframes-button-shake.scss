@@ -1,0 +1,22 @@
+$pink: #FF79DA;
+$purple: #9356DC;
+$shake-intensity: 1%;
+
+
+//KEYFRAMES BUTTON SHAKES
+@keyframes button-shakes {
+    from {
+        // entièrement à droite
+        transform: translateY($shake-intensity * 3) scale(0.9);
+    }
+    to {
+        // entièrement à gauche
+        transform: translateY($shake-intensity * -3) scaleY(1);
+        
+
+    }
+}
+
+.button-primary{
+    animation: button-shakes 2500ms ease-in-out alternate-reverse infinite;
+}

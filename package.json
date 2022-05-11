@@ -1,0 +1,11 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./style.css"
+  },
+  "author": "Amara",
+  "license": "ISC"
+}

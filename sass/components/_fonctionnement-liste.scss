@@ -1,0 +1,139 @@
+// VARIABLES
+
+$background-primary: #F7F7F7;
+$purple: #A271E0;
+
+// MIXINS
+
+@mixin menu-accueil {
+    display: flex;
+    justify-content: center;
+    background-color: $background-primary;
+    border-radius: 24px;
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.1);
+    margin: 24px 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+
+    &:hover {
+        background-color: #F7F1FF;
+    
+        .position-icon-fontawesome {
+            color: #9356DC;
+        }
+    }
+}
+
+@mixin fonctionnement-responsive-grand-ecran() {
+    .margin-fonctionnement {
+        margin-top: 96px;
+    }
+
+    .fonctionnement-responsive {
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+        margin-bottom: 16px;
+    }
+
+    .fonctionnement-3 {
+        .margin-left-p {
+            margin-left: 10px;
+        }
+    }
+}
+
+@mixin fonctionnement-responsive() {
+    .margin-fonctionnement {
+        margin-top: 96px;
+    }
+
+    .fonctionnement-responsive {
+        
+        grid-template-columns: repeat(3, 3fr);
+        margin-bottom: 16px;
+    }
+
+    .fonctionnement-3 {
+        .margin-left-p {
+            margin-left: 10px;
+        }
+    }
+}
+// CSS
+
+.margin-fonctionnement {
+    margin-left: 14px;
+    margin-top: 46px;
+}
+
+.fonctionnement-1, .fonctionnement-2, .fonctionnement-3  {
+    @include menu-accueil;
+}
+
+.rounded-number {
+    border-radius: 50%;
+    background-color: #A271E0;
+    color: white;
+    padding: 2px 7px;
+    position: absolute;
+    left: -11px;
+    bottom: 9px;
+}
+
+.position-icon-fontawesome {
+    position: absolute;
+    left: 38px;
+    bottom: 3px;
+    color: #C6C6C6;
+    font-size: 22px;
+}
+
+// RESPONSIVE
+
+// TABLETTE
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+    .margin-fonctionnement {
+        margin-top: 96px;
+        margin-bottom: 36px;
+    }
+}
+
+// PETIT ECRAN 
+
+@media screen and (min-width: 280px) and (max-width: 374px) {
+
+    .margin-p-petitecran {
+        margin-left: 25px;
+    }
+
+    .position-icon-fontawesome {
+        position: absolute;
+        left: 18px;
+    }
+
+    .cards-menus-responsive{
+        margin-top: 20px;
+    }
+    
+}
+
+// DESKTOP 
+
+@media screen and (min-width: 990px) and (max-width: 1440px) {
+
+    @include fonctionnement-responsive-grand-ecran();
+}
+
+// GRAND ECRAN
+
+@media screen and (min-width: 1441px) and (max-width: 2560px) {
+
+    @include fonctionnement-responsive-grand-ecran();
+}
+
+
+
+

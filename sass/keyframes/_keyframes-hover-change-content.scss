@@ -1,0 +1,69 @@
+@keyframes progress-green-box {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes check-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glissement-text {
+    0% {
+        padding-right: 22px;
+    }
+    100% {
+        padding-right: 84px;
+    }
+}
+
+@keyframes glissement-ellipsis {
+    0% {
+        width: 300px;
+    }
+    40% {
+        width: 260px;
+    }
+    80% {
+        width: 230px;
+    }
+    100% {
+        width: 200px;
+    }
+}
+
+.cards-menu {
+    &:hover {
+        .p-prix {
+            animation: glissement-text 0.3s linear forwards;
+        }
+
+        .green-box {
+            opacity: 1;
+            animation: progress-green-box 0.4s linear forwards;
+
+            i {
+                animation: check-rotation 0.4s linear forwards;
+            }
+        }
+
+        .text-ellipsis {
+            animation: glissement-ellipsis 0.4s linear forwards;
+        }
+    }
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 300px;
+}

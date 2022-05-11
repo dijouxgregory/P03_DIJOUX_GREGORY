@@ -1,0 +1,35 @@
+$pink: #FF79DA;
+$purple: #9356DC;
+
+@mixin animation-heart-hover() {
+    opacity: 0;
+
+    &:hover {
+        animation: animation-heart 0.2s;
+        opacity: 1;
+        background: linear-gradient($pink, $purple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@keyframes animation-heart {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.icon-heart-animation {
+    position: absolute;
+    right: 26px;
+    bottom: -2px;
+    font-size: 26px;
+    @include animation-heart-hover(); 
+}
+
+.icon-heart-animation-menus {
+    @include animation-heart-hover();
+}

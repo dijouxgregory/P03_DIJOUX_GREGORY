@@ -1,0 +1,32 @@
+// VARIABLES
+
+$pink: #FF79DA;
+$purple: #9356DC;
+
+.button-primary {
+    border-style: none;
+    padding: 16px 28px;
+    border-radius: 23px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    background: linear-gradient($pink, $purple);
+    margin-top: 16px;
+
+    &:hover {
+        background: linear-gradient(darken($pink, 20%), darken($purple, 20%));
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.display-flex-commander {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 76px;
+    background-color: #F6F6F6;
+}
+
+.button-commander {
+    padding: 16px 58px;
+}

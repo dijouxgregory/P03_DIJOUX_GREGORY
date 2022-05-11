@@ -1,0 +1,70 @@
+// KEYFRAMES
+
+@keyframes card-animation {
+    0% {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@mixin cards-animation() {
+    animation: card-animation 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+
+// ANIMATION CARDS
+
+.cards-entree-animation-1 {
+    @include cards-animation();
+} 
+
+.cards-entree-animation-2 {
+    @include cards-animation();
+    animation-delay: 0.4s;
+} 
+
+.cards-entree-animation-3 {
+    @include cards-animation();
+    animation-delay: 0.8s;
+} 
+
+.cards-entree-animation-4 {
+    @include cards-animation();
+    animation-delay: 1.2s;
+} 
+
+.cards-plat-animation-1 {
+    @include cards-animation();
+    animation-delay: 1.6s;
+}
+
+.cards-plat-animation-2 {
+    @include cards-animation();
+    animation-delay: 2s;
+}
+
+.cards-plat-animation-3 {
+    @include cards-animation();
+    animation-delay: 2.4s;
+}
+
+.cards-dessert-animation-1 {
+    @include cards-animation();
+    animation-delay: 2.8s;
+}
+
+.cards-dessert-animation-2 {
+    @include cards-animation();
+    animation-delay: 3.2s;
+}
+
+.cards-dessert-animation-3 {
+    @include cards-animation();
+    animation-delay: 3.6s;
+}
